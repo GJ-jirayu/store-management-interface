@@ -1,0 +1,474 @@
+
+
+*{
+	font-family:Tahoma;
+	font-size:13px;
+}
+
+#loading {
+	width:180px;
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	color: #000000;
+	background: #ffffff;
+	font-weight: bold;
+	padding: 10px;
+	padding-left:15px;
+	padding-rigth:15px;
+	border-radius: 5px;
+	border: 1px solid #FFAF0F;
+}
+
+#loading #loadText {
+	display: inline;
+}
+
+
+body{
+	padding:0px;
+	margin:0px;
+	font-family:Tahoma;
+	font-size:13px;
+	
+	/*background: url("../styles/images/bg_pentaho_default.png") repeat scroll 0 0 #222222;*/
+    
+}
+#mainBody{
+	margin:auto;
+	width:100%;
+	padding:0px;
+	height:auto;
+	
+}
+#mainBody #header{
+	width:100%;
+	background:#8B4513;
+	height:23px;
+	padding-top:5px;
+	padding-bottom:5px;
+	/*border-radius:5px;*/
+}
+#mainBody #header #heaerLeft{
+	float:left;
+	/*width:635px;*/
+}
+#mainBody #header #heaerRight{
+	float: left;
+    margin-left: 50px;
+    position: absolute;
+    text-align: center;
+    width: 1290px;
+}
+#mainBody #header #heaerRight #boxTopButton{
+	width:200px;
+	/*display:inline;*/
+	text-align:center;
+	
+}
+#mainBody #header #heaerLeft #btHideShowArea{
+	
+	
+}
+
+
+#mainBody #header #heaerLeft #btHideShowArea #btHideShow{
+	
+	padding:2px;
+	border:1px solid #FEEEBD;
+	background:#FEEEBD;
+	border-radius:5px;
+	width:20px;
+	cursor:pointer;
+	float:left;
+}
+#mainBody #header #heaerLeft #btHideShowArea #nameCateGraph{
+	float:left;
+	color:white;
+	font-weight:bold;
+	width:370px;
+	padding: 2px 2px 2px 5px;
+	font-size:15px;
+}
+
+#mainBody #mainContent {
+	overflow:hidden;
+	position: absolute;
+	min-height: 500px;
+	width:100%;
+	
+}
+
+#mainBody #mainContent #leftMenu{
+	left:-200px;
+	height:300px;
+	background:black;
+	float:left;
+	position: absolute;
+	z-index:21;
+	opacity:1;	
+}
+
+#mainBody #mainContent #leftMenu #boxContent{
+	position: absolute;
+	width:200px;
+	height:auto;
+}
+#mainBody #mainContent #leftMenu #boxContent #boxTitle{
+	
+	background:#8B4513;
+	width:200px;
+	padding-top:5px;
+	padding-button:5px;
+	
+	font-weight:bold;
+	
+}
+#mainBody #mainContent #leftMenu #boxContent #boxTitle #txt{
+	padding:5px;
+	color:white;
+}
+#mainBody #mainContent #leftMenu #boxContent ul{
+	position: absolute;
+	width:200px;
+	padding:0px;
+	margin:0px;
+	
+}
+#mainBody #mainContent #leftMenu #boxContent ul li{
+	background:#FEEEBD;
+	display:block;
+	border-bottom:1px solid #cccccc;
+	
+}
+
+
+#mainBody #mainContent #leftMenu #boxContent ul li a{
+	display:block;
+	text-decoration:none;
+	color:black;
+	padding:5px;
+	padding-left:10px;
+	
+}
+#mainBody #mainContent #leftMenu #boxContent ul li.selected{
+	background:#8B4513;
+	display:block;
+	color:white;
+	font-weight:bold;
+	padding:5px;
+}
+
+#mainBody #mainContent #leftMenu #boxContent ul li a:hover{
+	background:white;
+	display:block;
+	color:black;
+	
+	
+}
+
+
+
+
+
+#mainBody #mainContent #content{
+	width:100%;
+
+	background:#FEEEBD;
+	float:right;
+	
+}
+#mainBody #mainContent #content #boxContent2{
+	width:1360px;
+	padding-left:4px;
+}
+#mainBody #mainContent #content #boxContent2 .graphBoxArea{
+	width: 672px;
+	background:white;
+	height:310px;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	float:left;
+	margin:2px;
+	
+	
+}
+#mainBody #mainContent #content #boxContent2 .graphBoxArea .graphTop{
+	height:272px;
+	border-bottom:1px solid #cccccc;
+	border-radius:1px;
+	margin-bottom: 2px;
+	padding:2px;
+	padding-left:5px;
+}
+#mainBody #mainContent #content #boxContent2 .graphBoxArea .graphBottom{
+	margin-top:2px;
+	border-radius:1px;
+
+}
+#mainBody #mainContent #content #boxContent2 .graphBoxArea .graphBottom .graphDetail{
+	width:370px;
+	padding:2px;
+	float:left;
+	font-weight:bold;
+}
+#mainBody #mainContent #content #boxContent2 .graphBoxArea .graphBottom .graphAddFav{
+	width:135px;
+	float:right;
+}
+.ball{
+	border-radius:100%;
+	width:20px;
+	height:20px;
+	background:white;
+	cursor:pointer;
+	float:left;
+	margin-left:5px;
+}
+.ballGreenTopButton{
+	border-radius:100%;
+	width:20px;
+	height:20px;
+	background:#FEEEBD;
+}
+.ballGreen{
+	border-radius:100%;
+	width:20px;
+	height:20px;
+	background:green;
+}
+.ballRed{
+	border-radius:100%;
+	width:20px;
+	height:20px;
+	background:red;
+}
+div#selectFav ul{
+	margin:0px;
+	padding:5px;
+}
+div#selectFav ul li{
+	
+	height:17px;
+	list-style-type: none;
+	display:block;
+	
+	/*background:blue;*/
+	
+	
+}
+#selectFav ul li .slotFavName a{
+    display:block;
+	border-bottom:1px solid white;
+	width:250px;
+	padding:5px;
+	text-decoration:none;
+}
+#selectFav ul li .slotFavName a:hover{
+	display:block;
+	background:white;
+}
+
+
+#selectFav ul li .statusFav{
+	border-radius:100%;
+	width:15px;
+	height:15px;
+	/*background:green;*/
+	display:show;
+	float:left;
+
+}
+#selectFav ul li .slotFavName{
+	
+	float:left;
+	margin-left:5px;
+	
+}
+/*Tootip*/
+#tooltipContent{
+	width:200px;
+	height:auto;
+	position:absolute;
+	z-index:10;
+	background:white;
+	display:none;
+	border-radius:0px;
+	border:1px solid #cccccc;
+	cursor:pointer;
+	padding:5px;
+	font-weight:bold;
+}
+.settingArea{
+	position:relative;
+	z-index:99;
+	width:655px;
+	/*background:red;*/
+}
+.settingArea .setting{
+	padding:5px;
+	float:right;
+	border:1px solid #FEEEBD;
+	background:#FEEEBD;
+	border-radius:5px;
+	cursor:pointer;
+	left: 630px;
+    position: absolute;
+	
+}
+
+#setParamForm{
+	width:655px;
+	height:270px;
+	position:absolute;
+	z-index:20;
+	display:none;
+	background:white;
+	opacity:1;
+	
+	
+}
+#contentGraph{
+	
+	width:100%;
+	hegiht:auto;
+}
+
+.setParamArea{
+	
+}
+.setParamArea .setParamHeader{
+	width:auto;
+	margin-bottom:5px;
+	
+	
+}
+.setParamArea .setParamHeader .text{
+	padding:6px;
+	background:#FEEEBD;
+	font-weight:bold;
+}
+.setParamArea .setParam{
+	width:auto;
+	height:190px;
+	padding:5px;
+	
+}
+
+.setParamArea .btnArea{
+	width:auto;
+	
+}
+.setParamArea .btnArea .btn{
+	padding:5px;
+}
+
+.ui-button{
+	padding:5px;
+}
+
+.chart{
+	margin-top:0px;
+	
+}
+#categroryNameTitle{
+	display:inline;
+	font-size:15px;
+	
+}
+.listSequence{
+	width:80px;
+	margin-right:5px;
+}
+
+
+/* GRAPH2 START*/
+/*
+.chartMTD{
+	float:left;
+	
+}
+.chartYTD{
+	float:left;
+}
+*/
+#boxSalePerMonthMTD{
+	float:left;
+	width:310px;
+}
+#boxSalePerMonthYTD{
+	float:left;
+	width:330px;
+}
+.lengendSalePerMonth{
+	padding-left:5px;
+}
+.lengendSalePerMonth .rowLengendSalePerMonth{
+	clear:both;
+}
+.lengendSalePerMonth .rowLengendSalePerMonth .columnLengendSalePerMonth{
+	float:left;
+}
+.square{
+	width:10px;
+	height:10px;
+}
+.orangeSalePerMonth{
+	  background: none repeat scroll 0 0 #FFA500;
+}
+.blueSalePerMonth{
+	  background: none repeat scroll 0 0 #007bc3;
+}
+.graySalePerMonth{
+	  background: none repeat scroll 0 0 gray;
+}
+.graycccSalePerMonth{
+	  background: none repeat scroll 0 0 #cccccc;
+}
+.fontLegend{
+	color:#4e5968;
+}
+/* GRAPH2 END*/
+
+/*Tootip*/
+.tooltipContent{
+	max-width:250px;
+	height:auto;
+	position:absolute;
+	z-index:10;
+	background:white;
+	display:none;
+	border-radius:0px;
+	border:1px solid #cccccc;
+	cursor:pointer;
+	padding:5px;
+	font-weight:bold;
+	display:hidden;
+}
+.subMenu{
+	display:none;
+	position:absolute;
+	left:202px;
+	z-index:50;
+	/*top:100px;*/
+}
+.subMenu ul{
+	padding:0px;
+	margin:0px;
+}
+.subMenu ul li{
+	display:block;
+	padding:5px;
+}
+#loadBranch{
+	width:180px;
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	color: #000000;
+	background: #ffffff;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #FFAF0F;
+}
